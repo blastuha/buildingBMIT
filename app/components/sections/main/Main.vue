@@ -13,12 +13,12 @@
         </p>
       </div>
 
-      <Button text="ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ" />
+      <Button text="ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ" size="xl" />
     </div>
   </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import styles from "./Main.module.scss";
 import Button from "@/app/components/ui/Button.vue";
 </script>
