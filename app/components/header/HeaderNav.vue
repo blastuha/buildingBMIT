@@ -31,12 +31,15 @@ import { headerNavItems } from "~/app/constants/headerNavItems";
 
 .nav-link {
   text-decoration: none;
-  color: #333;
-  font-weight: 500;
   transition: color 0.2s;
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #ffffff;
 }
 
-.nav-link:hover {
-  color: #007bff;
-}
+// .nav-link:hover {
+//   color: #000000;
+// }
 </style>

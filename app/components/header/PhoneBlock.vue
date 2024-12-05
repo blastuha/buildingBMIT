@@ -33,7 +33,18 @@
     border-radius: 8px;
   }
 
-  &__icon {
+  // &__icon {
+  // }
+
+  &__text {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: left;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
   }
 }
 </style>
