@@ -2,25 +2,29 @@
   <section :class="styles['about-section']">
     <div :class="styles['about-section__content']">
       <!-- Левый блок: изображение -->
-      <NuxtImg
+      <!-- <NuxtImg
         src="/aboutUsImage.svg"
         alt="about us image"
-        class="about-section__image"
-        width="677"
-        height="558"
+        sizes="100vw md:900px"
+      /> -->
+      <img
+        src="/aboutUsImage.svg"
+        alt="about us image"
+        :class="styles['about-section__image']"
       />
-
       <!-- Правый блок: текст и информация -->
       <div :class="styles['about-section__details']">
-        <h2 :class="styles['about-section__title']">О нас</h2>
-        <p :class="styles['about-section__description']">
-          Компания, которой можно доверить всё — от частного ремонта до
-          строительства масштабных муниципальных объектов. Наши специалисты
-          выполняли работы для промышленных предприятий и инфраструктурных
-          проектов. Благодаря собственному ПТО и слаженной команде мы
-          обеспечиваем надёжность, точность и выполнение сроков как для крупных
-          организаций, так и для частных заказчиков.
-        </p>
+        <div :class="styles['about-section__info']">
+          <h2 :class="styles['about-section__info-title']">О нас</h2>
+          <p :class="styles['about-section__info-description']">
+            Компания, которой можно доверить всё — от частного ремонта до
+            строительства масштабных муниципальных объектов. Наши специалисты
+            выполняли работы для промышленных предприятий и инфраструктурных
+            проектов. Благодаря собственному ПТО и слаженной команде мы
+            обеспечиваем надёжность, точность и выполнение сроков как для
+            крупных организаций, так и для частных заказчиков.
+          </p>
+        </div>
 
         <!-- Блок со статистикой -->
         <div :class="styles['about-section__stats']">
