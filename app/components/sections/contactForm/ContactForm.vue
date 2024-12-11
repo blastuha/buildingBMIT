@@ -46,16 +46,13 @@
             <a href="#">политикой обработки персональных данных</a>
           </label>
         </div>
-
-        <!-- Кнопка -->
-
-        <!-- <button type="submit" :class="styles['contact-section__button']">
-          Отправить
-        </button> -->
       </form>
 
-      <Button size="xl" text="ОТПРАВИТЬ"
-      :class="styles['contact-section__button']"" />
+      <Button
+        size="xl"
+        text="ОТПРАВИТЬ"
+        :class="styles['contact-section__button']"
+      />
     </div>
   </section>
 </template>

@@ -6,6 +6,7 @@
     <OurWorks />
     <Services />
     <ContactForm />
+    <Contacts />
   </main>
 </template>
 
@@ -16,6 +17,7 @@ import AboutUs from "~/app/components/sections/aboutUs/AboutUs.vue";
 import OurWorks from "~/app/components/sections/ourWorks/OurWorks.vue";
 import Services from "~/app/components/sections/services/Services.vue";
 import ContactForm from "~/app/components/sections/contactForm/ContactForm.vue";
+import Contacts from "~/app/components/sections/contacts/Contacts.vue";
 </script>
 
 <style lang="scss" scoped></style>
