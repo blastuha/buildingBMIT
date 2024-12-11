@@ -1,0 +1,51 @@
+.footer {
+  display: flex;
+  align-items: center;
+  background: #eff0f9;
+  height: 85px;
+  padding: 0 100px;
+
+  &__content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.52px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #343fb866;
+  }
+
+  &__column--right {
+    display: flex;
+    flex-direction: column;
+
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.52px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #343fb866;
+
+    text-align: right;
+  }
+
+  &__link {
+    font-weight: 700;
+    text-decoration: none; /* Убирает подчеркивание */
+    color: inherit; /* Наследует цвет текста родителя */
+    cursor: pointer; /* Указывает, что элемент кликабельный */
+  }
+}

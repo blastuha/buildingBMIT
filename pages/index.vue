@@ -7,6 +7,7 @@
     <Services />
     <ContactForm />
     <Contacts />
+    <Footer />
   </main>
 </template>
 
@@ -18,6 +19,7 @@ import OurWorks from "~/app/components/sections/ourWorks/OurWorks.vue";
 import Services from "~/app/components/sections/services/Services.vue";
 import ContactForm from "~/app/components/sections/contactForm/ContactForm.vue";
 import Contacts from "~/app/components/sections/contacts/Contacts.vue";
+import Footer from "~/app/components/footer/Footer.vue";
 </script>
 
 <style lang="scss" scoped></style>
