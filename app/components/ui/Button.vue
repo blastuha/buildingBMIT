@@ -1,5 +1,5 @@
 <template>
-  <button :class="$style.button" :style="{ padding: paddingMap[size] }">
+  <button :class="$style.button" :style="{ padding: paddingMap[buttonSize] }">
     {{ text }}
   </button>
 </template>
@@ -10,8 +10,10 @@ import type { ButtonSizes } from "@/app/types/buttonSizes";
 
 const props = defineProps<{
   text: string;
-  size: ButtonSizes;
+  // size: ButtonSizes;
 }>();
+
+const buttonSize = ref<ButtonSizes>("xl");
 
 const paddingMap: Record<ButtonSizes, string> = {
   s: "14px 20px",
@@ -19,6 +21,32 @@ const paddingMap: Record<ButtonSizes, string> = {
   l: "17px 20px",
   xl: "18px 24px",
 };
+
+// Функция для определения размера на основе ширины экрана
+const updateButtonSize = () => {
+  const width = window.innerWidth;
+
+  if (width >= 1920) {
+    buttonSize.value = "xl";
+  } else if (width >= 1280 && width < 1920) {
+    buttonSize.value = "l";
+  } else if (width >= 768 && width < 1280) {
+    buttonSize.value = "m";
+  } else {
+    buttonSize.value = "s";
+  }
+
+  console.log("Updated buttonSize:", buttonSize.value);
+};
+
+onMounted(() => {
+  updateButtonSize();
+  window.addEventListener("resize", updateButtonSize);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("resize", updateButtonSize);
+});
 </script>
 
 <style lang="scss" module>

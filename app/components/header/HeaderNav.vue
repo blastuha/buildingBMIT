@@ -37,6 +37,12 @@ import { headerNavItems } from "~/app/constants/headerNavItems";
   font-weight: 400;
   line-height: 18px;
   color: #ffffff;
+
+  @media (max-width: 1920px) {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 15px;
+  }
 }
 
 // .nav-link:hover {

@@ -1,12 +1,7 @@
 <template>
   <div :class="$style['phone']">
     <div :class="$style['phone__wrapper']">
-      <NuxtImg
-        :class="$style['phone__icon']"
-        src="/icons/bigPhone.svg"
-        width="24"
-        height="24"
-      />
+      <NuxtImg :class="$style['phone__icon']" src="/icons/bigPhone.svg" />
     </div>
 
     <span :class="$style['phone__text']">+7 (902) 915-62-86 </span>
@@ -31,10 +26,21 @@
     height: 44px;
     background-color: #ffffff;
     border-radius: 8px;
+
+    @media (max-width: 1920px) {
+      width: 40px;
+      height: 40px;
+    }
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
   }
 
-  // &__icon {
-  // }
+  &__icon {
+    cursor: pointer;
+  }
 
   &__text {
     font-size: 18px;
@@ -45,6 +51,12 @@
     text-decoration-style: solid;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
+
+    @media (max-width: 1920px) {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 16px;
+    }
   }
 }
 </style>
