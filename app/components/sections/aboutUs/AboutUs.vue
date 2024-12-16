@@ -7,11 +7,10 @@
         alt="about us image"
         sizes="100vw md:900px"
       /> -->
-      <img
-        src="/aboutUsImage.svg"
-        alt="about us image"
-        :class="styles['about-section__image']"
-      />
+      <div :class="styles['about-section__image-wrapper']">
+        <img src="/aboutUsImage.svg" alt="about us image" />
+      </div>
+
       <!-- Правый блок: текст и информация -->
       <div :class="styles['about-section__details']">
         <div :class="styles['about-section__info']">

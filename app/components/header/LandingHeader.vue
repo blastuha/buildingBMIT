@@ -25,7 +25,10 @@ import Button from "@/app/components/ui/Button.vue";
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 0 100px;
+
+  @media (max-width: 1920px) {
+    padding: 0 72px 0 72px;
+  }
 
   &__contact {
     display: flex;

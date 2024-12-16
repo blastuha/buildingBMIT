@@ -4,21 +4,21 @@
       <h1>Наши работы</h1>
       <div :class="styles['works-section__examples']">
         <figure :class="styles['works-section__example-card']">
-          <NuxtImg src="/ourWorks/ourWorks1.svg" />
+          <NuxtImg src="/ourWorks/ourWorks1.svg" alt="exmaple" />
           <figcaption :class="styles['works-section__example-title']">
             Пример 1
           </figcaption>
         </figure>
 
         <figure :class="styles['works-section__example-card']">
-          <NuxtImg src="/ourWorks/ourWorks2.svg" />
+          <NuxtImg src="/ourWorks/ourWorks2.svg" alt="exmaple" />
           <figcaption :class="styles['works-section__example-title']">
             Пример 2
           </figcaption>
         </figure>
 
         <figure :class="styles['works-section__example-card']">
-          <NuxtImg src="/ourWorks/ourWorks3.svg" />
+          <NuxtImg src="/ourWorks/ourWorks3.svg" alt="exmaple" />
           <figcaption :class="styles['works-section__example-title']">
             Пример 3
           </figcaption>

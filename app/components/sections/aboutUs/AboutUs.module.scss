@@ -1,18 +1,10 @@
 .about-section {
   display: flex;
-  // align-items: center;
-  // justify-content: center;
-  padding: 0 100px;
   width: 100%;
-  // height: 798px;
-  height: auto;
+  height: 798px;
 
-  &__image {
-    width: 50%; // Изображение займет всю ширину родителя.
-    height: auto; // Высота будет автоматически подстраиваться для сохранения пропорций.
-    min-height: 558px;
-    object-fit: contain; // Сохраняет пропорции изображения.
-    max-width: 100%; // Предотвращает растягивание изображения.
+  @media (max-width: 1920px) {
+    height: 683px;
   }
 
   &__content {
@@ -20,9 +12,31 @@
     margin-top: 160px;
     margin-bottom: 80px;
     gap: 50px;
-    // height: 558px;
     height: auto; // Убираем фиксированную высоту.
-    min-height: 300px; // Указываем минимальную высоту для устойчивости.
+
+    @media (max-width: 1920px) {
+      margin-top: 140px;
+      margin-bottom: 70px;
+    }
+  }
+
+  &__image-wrapper {
+    flex-shrink: 0;
+    width: 677px; // Изображение займет всю ширину родителя.
+    height: 558px; // Высота будет автоматически подстраиваться для сохранения пропорций.
+    border-radius: 16px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; // Заполняет блок, обрезая излишки.
+    }
+
+    @media (max-width: 1920px) {
+      width: 443px;
+      height: 473px;
+    }
   }
 
   &__details {
@@ -35,6 +49,10 @@
     display: flex;
     flex-direction: column;
     gap: 32px;
+
+    @media (max-width: 1920px) {
+      gap: 24px;
+    }
   }
 
   &__info-title {
@@ -42,6 +60,13 @@
     font-weight: 500;
     line-height: 52px;
     letter-spacing: -0.01em;
+
+    @media (max-width: 1920px) {
+      font-size: 36px;
+      font-weight: 500;
+      line-height: 46.8px;
+      letter-spacing: -0.01em;
+    }
   }
 
   &__info-description {
@@ -49,12 +74,19 @@
     font-size: 20px;
     font-weight: 400;
     line-height: 30.4px;
+
+    @media (max-width: 1920px) {
+      gap: 24px;
+    }
   }
 
   &__stats {
     display: flex;
     gap: 24px;
-    max-height: 215px;
+
+    @media (max-width: 1920px) {
+      gap: 16px;
+    }
   }
 
   &__stat {
@@ -64,6 +96,10 @@
     background: #343fb80a;
     border-radius: 20px;
     padding: 24px;
+
+    @media (max-width: 1920px) {
+      padding: 20px;
+    }
   }
 
   &__stat-title {
@@ -71,11 +107,23 @@
     font-weight: 500;
     line-height: 36.96px;
     letter-spacing: -0.01em;
+
+    @media (max-width: 1920px) {
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 29.04px;
+    }
   }
 
   &__stat-description {
     font-size: 19px;
     font-weight: 400;
     line-height: 28.88px;
+
+    @media (max-width: 1920px) {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21.28px;
+    }
   }
 }
