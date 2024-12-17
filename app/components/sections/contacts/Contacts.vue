@@ -42,7 +42,7 @@
       <!-- Карта -->
       <div :class="styles['contacts-section__map']">
         <!-- Здесь должен быть компонент карты, либо img -->
-        <img src="/map.svg" alt="Карта с адресом" />
+        <img src="/map.png" alt="Карта с адресом" />
       </div>
     </div>
   </section>

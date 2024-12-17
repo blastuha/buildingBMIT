@@ -4,13 +4,14 @@
       <!-- Левая колонка -->
       <div :class="styles['footer__column']">
         <p :class="styles['footer__text']">
-          © «МИС центр», 2024. Все права защищены
+          © «МИС центр», 2024. <br />
+          Все права защищены
         </p>
       </div>
 
       <!-- Центральная колонка -->
       <div :class="styles['footer__column']">
-        <p :class="styles['footer__text']">
+        <p :class="styles['footer__text--center']">
           ООО «МИС центр»<br />
           ИНН/КПП 2457072907/245701001<br />
           ОГРН 1112457002074
