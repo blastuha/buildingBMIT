@@ -38,7 +38,7 @@ import { headerNavItems } from "~/app/constants/headerNavItems";
   line-height: 18px;
   color: #ffffff;
 
-  @media (max-width: 1920px) {
+  @media (max-width: 1919px) {
     font-size: 15px;
     font-weight: 500;
     line-height: 15px;

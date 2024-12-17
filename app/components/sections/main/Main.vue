@@ -14,6 +14,12 @@
       </div>
 
       <Button text="ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ" size="xl" />
+
+      <NuxtImg
+        src="/mainSectionImage.svg"
+        alt="mainBg"
+        :class="styles['intro-section__image']"
+      />
     </div>
   </section>
 </template>

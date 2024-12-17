@@ -4,7 +4,9 @@
 
   "compilerOptions": {
     "strict": true,
+    "noImplicitAny": true,
+    "noUnusedParameters": true,
     "strictNullChecks": true,
-    "noImplicitAny": true
+    "exactOptionalPropertyTypes": true
   }
 }

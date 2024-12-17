@@ -4,6 +4,9 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ["./app/styles/global.scss"],
   modules: ["@nuxt/image"],
+  typescript: {
+    strict: true,
+  },
   // image: {
   //   // The screen sizes predefined by `@nuxt/image`:
   //   screens: {

@@ -1,17 +1,15 @@
 <template>
   <header class="header">
     <NuxtImg src="/companyLogo.svg" alt="logo" width="92" height="48" />
-    <HeaderNav />
-    <div class="header__contact">
-      <PhoneBlock />
-      <Button text="ЗАКАЗАТЬ ЗВОНОК" size="xl" />
+    <div class="header__buttons">
+      <Button text="ЗАКАЗАТЬ ЗВОНОК" />
+      <BurgerMenu />
     </div>
   </header>
 </template>
 
 <script setup lang="ts">
-import HeaderNav from "./HeaderNav.vue";
-import PhoneBlock from "./PhoneBlock.vue";
+import BurgerMenu from "../ui/BurgerMenu.vue";
 import Button from "@/app/components/ui/Button.vue";
 </script>
 
@@ -25,16 +23,13 @@ import Button from "@/app/components/ui/Button.vue";
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  padding: 0 40px 0 40px;
 
-  @media (max-width: 1919px) {
-    padding: 0 72px 0 72px;
-  }
-
-  &__contact {
+  &__buttons {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 80px;
+    gap: 12px;
   }
 }
 </style>

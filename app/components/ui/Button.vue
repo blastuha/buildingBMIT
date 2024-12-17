@@ -8,10 +8,9 @@
 import { defineProps } from "vue";
 import type { ButtonSizes } from "@/app/types/buttonSizes";
 
-const props = defineProps<{
-  text: string;
-  // size: ButtonSizes;
-}>();
+defineProps({
+  text: { type: String, required: true },
+});
 
 const buttonSize = ref<ButtonSizes>("xl");
 

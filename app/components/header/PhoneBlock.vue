@@ -27,7 +27,7 @@
     background-color: #ffffff;
     border-radius: 8px;
 
-    @media (max-width: 1920px) {
+    @media (max-width: 1919px) {
       width: 40px;
       height: 40px;
     }
@@ -52,7 +52,7 @@
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
 
-    @media (max-width: 1920px) {
+    @media (max-width: 1919px) {
       font-size: 16px;
       font-weight: 500;
       line-height: 16px;
