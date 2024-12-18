@@ -7,7 +7,7 @@
         alt="about us image"
         sizes="100vw md:900px"
       /> -->
-      <div :class="styles['about-section__image-wrapper']">
+      <div :class="styles['about-section__image-wrapper']" v-if="!isMobile">
         <img src="/aboutUsImage.svg" alt="about us image" />
       </div>
 
@@ -45,12 +45,20 @@
           </div>
         </div>
       </div>
+
+      <div :class="styles['about-section__image-wrapper']" v-if="isMobile">
+        <img src="/aboutUsImage.svg" alt="about us image" />
+      </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
 import styles from "./AboutUs.module.scss";
+
+defineProps({
+  isMobile: Boolean,
+});
 </script>
 
 <style lang="scss" module></style>

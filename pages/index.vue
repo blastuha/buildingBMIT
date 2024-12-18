@@ -3,10 +3,10 @@
     <LandingHeader v-if="!isMobile" />
     <MobileHeader v-else />
 
-    <MainSection />
-    <!-- <AboutUs />
+    <MainSection :is-mobile="isMobile" />
+    <AboutUs :is-mobile="isMobile" />
     <OurWorks />
-    <Services />
+    <!--<Services />
     <ContactForm />
     <Contacts />
     <Footer /> -->

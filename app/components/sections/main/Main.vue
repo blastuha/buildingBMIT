@@ -11,15 +11,18 @@
           Мы всегда стремимся к высокому результату, независимо от масштаба
           проекта
         </p>
+        <!-- <Button text="ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ" size="xl" v-if="isMobile" /> -->
       </div>
 
-      <Button text="ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ" size="xl" />
-
-      <NuxtImg
-        src="/mainSectionImage.svg"
-        alt="mainBg"
-        :class="styles['intro-section__image']"
+      <Button
+        text="ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ"
+        size="xl"
+        :class="styles['intro-section__btn']"
       />
+
+      <div :class="styles['intro-section__image']" v-if="isMobile">
+        <NuxtImg src="/mainSectionImage.svg" alt="mainBg" />
+      </div>
     </div>
   </section>
 </template>
@@ -27,6 +30,10 @@
 <script setup lang="ts">
 import styles from "./Main.module.scss";
 import Button from "@/app/components/ui/Button.vue";
+
+defineProps({
+  isMobile: Boolean,
+});
 </script>
 
 <style lang="scss" module></style>
