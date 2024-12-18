@@ -12,6 +12,12 @@
     padding-bottom: 70px;
   }
 
+  @media (max-width: 1279px) {
+    height: 662px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
   &__content {
     width: 100%;
     height: 100%;
@@ -70,5 +76,11 @@
     line-height: 36.96px;
     letter-spacing: -0.01em;
     text-align: center;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 600px;
+    background-color: red;
   }
 }

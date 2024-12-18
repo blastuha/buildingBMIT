@@ -5,7 +5,7 @@
 
     <MainSection :is-mobile="isMobile" />
     <AboutUs :is-mobile="isMobile" />
-    <OurWorks />
+    <OurWorks :is-mobile="isMobile" />
     <!--<Services />
     <ContactForm />
     <Contacts />
