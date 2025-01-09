@@ -11,6 +11,13 @@
     padding-top: 140px;
   }
 
+  @media (max-width: 1279px) {
+    height: 1174px;
+    padding-top: 120px;
+    padding-bottom: 0px;
+    align-items: flex-start;
+  }
+
   &__content {
     width: 100%;
     display: flex;
@@ -19,6 +26,10 @@
 
     @media (max-width: 1919px) {
       gap: 38px;
+    }
+
+    @media (max-width: 1279px) {
+      gap: 34px;
     }
 
     h1 {
@@ -32,6 +43,11 @@
         font-weight: 500;
         line-height: 46.8px;
       }
+
+      @media (max-width: 1279px) {
+        font-size: 32px;
+        line-height: 41.6px;
+      }
     }
   }
 
@@ -39,6 +55,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 1279px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); // Две колонки
+      gap: 16px;
+    }
   }
 
   &__info-item {
@@ -57,6 +79,11 @@
         font-size: 16px;
         line-height: 24.32px;
       }
+
+      @media (max-width: 1279px) {
+        font-size: 15px;
+        line-height: 22.8px;
+      }
     }
 
     a,
@@ -72,6 +99,11 @@
         font-size: 22px;
         font-weight: 500;
         line-height: 29.04px;
+      }
+
+      @media (max-width: 1279px) {
+        font-size: 20px;
+        line-height: 26.4px;
       }
     }
 
@@ -91,6 +123,16 @@
 
     @media (max-width: 1919px) {
       height: 500px;
+    }
+
+    @media (max-width: 1279px) {
+      height: 772px;
+      border-radius: 0px;
+      width: calc(
+        100% + 80px
+      ); // Увеличиваем ширину на padding для этого брейкпоинта
+      margin-left: -40px;
+      margin-right: -40px;
     }
 
     img {

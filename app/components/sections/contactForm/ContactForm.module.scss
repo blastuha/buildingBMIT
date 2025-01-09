@@ -19,6 +19,11 @@
     height: 765px;
   }
 
+  @media (max-width: 1279px) {
+    height: 666px;
+    background-position: left;
+  }
+
   &__content {
     box-sizing: border-box;
     display: flex;
@@ -32,6 +37,10 @@
     @media (max-width: 1919px) {
       max-width: 459px;
     }
+
+    @media (max-width: 1279px) {
+      max-width: 400px;
+    }
   }
 
   &__header {
@@ -44,6 +53,11 @@
       font-weight: 500;
       line-height: 52px;
       letter-spacing: -0.01em;
+
+      @media (max-width: 1279px) {
+        font-size: 32px;
+        line-height: 41.6px;
+      }
     }
 
     p {
@@ -51,6 +65,11 @@
       font-weight: 400;
       line-height: 30.4px;
       text-align: left;
+
+      @media (max-width: 1279px) {
+        font-size: 13px;
+        line-height: 19.76px;
+      }
     }
   }
 

@@ -8,8 +8,8 @@
     <OurWorks :is-mobile="isMobile" />
     <Services />
     <ContactForm />
-    <!-- <Contacts />
-    <Footer /> -->
+    <Contacts />
+    <Footer />
   </main>
 </template>
 
