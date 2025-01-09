@@ -6,9 +6,9 @@
     <MainSection :is-mobile="isMobile" />
     <AboutUs :is-mobile="isMobile" />
     <OurWorks :is-mobile="isMobile" />
-    <!--<Services />
+    <Services />
     <ContactForm />
-    <Contacts />
+    <!-- <Contacts />
     <Footer /> -->
   </main>
 </template>

@@ -17,6 +17,10 @@
     padding-bottom: 60px;
   }
 
+  // @media (max-width: 850px) {
+  //   height: 11px;
+  // }
+
   &__content {
     display: flex;
     gap: 50px;
@@ -24,6 +28,10 @@
 
     @media (max-width: 1279px) {
       flex-direction: column;
+    }
+
+    @media (max-width: 900px) {
+      gap: 30px;
     }
   }
 
@@ -47,6 +55,11 @@
 
     @media (max-width: 1279px) {
       width: 100%;
+      height: 615px;
+    }
+
+    @media (max-width: 744px) {
+      width: 664px;
       height: 615px;
     }
   }

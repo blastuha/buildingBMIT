@@ -3,7 +3,7 @@
     <div :class="styles['works-section__content']">
       <h1>
         Наши работы
-        <div class="swiper-buttons">
+        <div class="swiper-buttons" v-if="isMobile">
           <div class="swiper-button custom-prev">
             <NuxtImg src="/icons/swiper/arrow-left.svg" alt="arrow" />
           </div>
@@ -12,10 +12,34 @@
           </div>
         </div>
       </h1>
-      <div :class="styles['swiper']">
+
+      <div :class="styles['works-section__examples']" v-if="!isMobile">
+        <figure :class="styles['works-section__example-card']">
+          <NuxtImg src="/ourWorks/ourWorks1.svg" alt="exmaple" />
+          <figcaption :class="styles['works-section__example-title']">
+            Пример 1
+          </figcaption>
+        </figure>
+
+        <figure :class="styles['works-section__example-card']">
+          <NuxtImg src="/ourWorks/ourWorks2.svg" alt="exmaple" />
+          <figcaption :class="styles['works-section__example-title']">
+            Пример 2
+          </figcaption>
+        </figure>
+
+        <figure :class="styles['works-section__example-card']">
+          <NuxtImg src="/ourWorks/ourWorks3.svg" alt="exmaple" />
+          <figcaption :class="styles['works-section__example-title']">
+            Пример 3
+          </figcaption>
+        </figure>
+      </div>
+
+      <div :class="styles['swiper']" v-if="isMobile">
         <swiper
           :slidesPerView="2"
-          :spaceBetween="60"
+          :spaceBetween="0"
           :modules="modules"
           class="mySwiper"
           :centeredSlides="true"
@@ -25,7 +49,7 @@
             nextEl: '.custom-next',
           }"
         >
-          <swiper-slide>
+          <swiper-slide class="swiper-slide">
             <figure :class="styles['works-section__example-card']">
               <NuxtImg src="/ourWorks/ourWorks1.svg" alt="example" />
               <figcaption :class="styles['works-section__example-title']">
@@ -33,7 +57,7 @@
               </figcaption>
             </figure>
           </swiper-slide>
-          <swiper-slide>
+          <swiper-slide class="swiper-slide">
             <figure :class="styles['works-section__example-card']">
               <NuxtImg src="/ourWorks/ourWorks2.svg" alt="example" />
               <figcaption :class="styles['works-section__example-title']">
@@ -41,7 +65,7 @@
               </figcaption>
             </figure>
           </swiper-slide>
-          <swiper-slide>
+          <swiper-slide class="swiper-slide">
             <figure :class="styles['works-section__example-card']">
               <NuxtImg src="/ourWorks/ourWorks3.svg" alt="example" />
               <figcaption :class="styles['works-section__example-title']">
@@ -89,5 +113,11 @@ const modules = [Navigation, Pagination];
     width: 12px;
     height: 10px;
   }
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
