@@ -1,6 +1,6 @@
 <template>
   <button class="burger-menu">
-    <img src="/public/icons/bigBurgerMenu.svg" alt="burgerMenu" />
+    <img src="/public/icons/bigBurgerMenu.svg" alt="burgerMenuBtn" />
   </button>
 </template>
 

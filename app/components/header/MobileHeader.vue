@@ -3,13 +3,13 @@
     <NuxtImg src="/companyLogo.svg" alt="logo" width="92" height="48" />
     <div class="header__buttons">
       <Button text="ЗАКАЗАТЬ ЗВОНОК" />
-      <BurgerMenu />
+      <BurgerMenuBtn />
     </div>
   </header>
 </template>
 
 <script setup lang="ts">
-import BurgerMenu from "../ui/BurgerMenu.vue";
+import BurgerMenuBtn from "../ui/BurgerMenuBtn.vue";
 import Button from "@/app/components/ui/Button.vue";
 </script>
 
