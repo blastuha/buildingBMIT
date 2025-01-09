@@ -1,31 +1,17 @@
 <template>
   <section :class="styles['works-section']">
     <div :class="styles['works-section__content']">
-      <h1>Наши работы</h1>
-      <!-- <div :class="styles['works-section__examples']" v-if="isMobile">
-        <figure :class="styles['works-section__example-card']">
-          <NuxtImg src="/ourWorks/ourWorks1.svg" alt="exmaple" />
-          <figcaption :class="styles['works-section__example-title']">
-            Пример 1
-          </figcaption>
-        </figure>
-
-        <figure :class="styles['works-section__example-card']">
-          <NuxtImg src="/ourWorks/ourWorks2.svg" alt="exmaple" />
-          <figcaption :class="styles['works-section__example-title']">
-            Пример 2
-          </figcaption>
-        </figure>
-
-        <figure :class="styles['works-section__example-card']">
-          <NuxtImg src="/ourWorks/ourWorks3.svg" alt="exmaple" />
-          <figcaption :class="styles['works-section__example-title']">
-            Пример 3
-          </figcaption>
-        </figure>
-      </div> -->
-
-      <!-- Swiper с модулями -->
+      <h1>
+        Наши работы
+        <div class="swiper-buttons">
+          <div class="swiper-button custom-prev">
+            <NuxtImg src="/icons/swiper/arrow-left.svg" alt="arrow" />
+          </div>
+          <div class="swiper-button custom-next">
+            <NuxtImg src="/icons/swiper/arrow-right.svg" alt="arrow" />
+          </div>
+        </div>
+      </h1>
       <div :class="styles['swiper']">
         <swiper
           :slidesPerView="2"
@@ -34,6 +20,10 @@
           class="mySwiper"
           :centeredSlides="true"
           :initialSlide="1"
+          :navigation="{
+            prevEl: '.custom-prev',
+            nextEl: '.custom-next',
+          }"
         >
           <swiper-slide>
             <figure :class="styles['works-section__example-card']">
@@ -79,4 +69,25 @@ defineProps({
 const modules = [Navigation, Pagination];
 </script>
 
-<style module></style>
+<style scoped>
+.swiper-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.swiper-button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #343fb80a;
+  border-radius: 8px;
+
+  img {
+    width: 12px;
+    height: 10px;
+  }
+}
+</style>
