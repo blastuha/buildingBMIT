@@ -18,6 +18,14 @@
     padding-bottom: 60px;
   }
 
+  @media (max-width: 744px) {
+    height: 662px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   &__content {
     width: 100%;
     height: 100%;
@@ -35,6 +43,11 @@
         font-size: 36px;
         font-weight: 500;
         line-height: 46.8px;
+      }
+
+      @media (max-width: 744px) {
+        padding-left: 40px;
+        padding-right: 40px;
       }
     }
   }
@@ -59,6 +72,14 @@
       border-radius: 8px;
     }
 
+    @media (max-width: 744px) {
+      width: 322px;
+      height: 460px;
+      border-radius: 12px;
+      padding: 20px;
+      gap: 20px;
+    }
+
     img {
       object-fit: cover;
       height: 505px;
@@ -66,6 +87,10 @@
       @media (max-width: 1919px) {
         width: 100%;
         height: 100%;
+      }
+
+      @media (max-width: 744px) {
+        height: 374px;
       }
     }
   }
@@ -80,7 +105,13 @@
 
   .swiper {
     width: 100%;
-    height: 600px;
-    background-color: red;
+    // max-width: 1006px;
+    height: 460px;
+    // background-color: red;
+  }
+
+  .mySwiper {
+    width: 100%;
+    height: 100%;
   }
 }

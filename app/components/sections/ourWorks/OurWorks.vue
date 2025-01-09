@@ -28,21 +28,37 @@
       <!-- Swiper с модулями -->
       <div :class="styles['swiper']">
         <swiper
+          :slidesPerView="2"
+          :spaceBetween="60"
+          :modules="modules"
           class="mySwiper"
-          :modules="[Navigation, Pagination]"
-          :navigation="{
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          }"
+          :centeredSlides="true"
+          :initialSlide="1"
         >
-          <swiper-slide>Slide 1</swiper-slide>
-          <swiper-slide>Slide 2</swiper-slide
-          ><swiper-slide>Slide 3</swiper-slide>
-          <swiper-slide>Slide 4</swiper-slide
-          ><swiper-slide>Slide 5</swiper-slide>
-          <swiper-slide>Slide 6</swiper-slide
-          ><swiper-slide>Slide 7</swiper-slide>
-          <swiper-slide>Slide 8</swiper-slide>
+          <swiper-slide>
+            <figure :class="styles['works-section__example-card']">
+              <NuxtImg src="/ourWorks/ourWorks1.svg" alt="example" />
+              <figcaption :class="styles['works-section__example-title']">
+                Пример 1
+              </figcaption>
+            </figure>
+          </swiper-slide>
+          <swiper-slide>
+            <figure :class="styles['works-section__example-card']">
+              <NuxtImg src="/ourWorks/ourWorks2.svg" alt="example" />
+              <figcaption :class="styles['works-section__example-title']">
+                Пример 2
+              </figcaption>
+            </figure>
+          </swiper-slide>
+          <swiper-slide>
+            <figure :class="styles['works-section__example-card']">
+              <NuxtImg src="/ourWorks/ourWorks3.svg" alt="example" />
+              <figcaption :class="styles['works-section__example-title']">
+                Пример 3
+              </figcaption>
+            </figure>
+          </swiper-slide>
         </swiper>
       </div>
     </div>
@@ -59,7 +75,8 @@ import styles from "./OurWorks.module.scss";
 defineProps({
   isMobile: Boolean,
 });
+
+const modules = [Navigation, Pagination];
 </script>
 
-<style module>
-</style>
+<style module></style>
