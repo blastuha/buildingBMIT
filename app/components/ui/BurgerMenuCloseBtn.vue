@@ -1,6 +1,6 @@
 <template>
   <button class="burger-menu" @click="handleClick">
-    <img src="/icons/bigBurgerMenu.svg" alt="burgerMenuBtn" />
+    <img src="/icons/bigClose.svg" alt="burgerMenuBtn" />
   </button>
 </template>
 

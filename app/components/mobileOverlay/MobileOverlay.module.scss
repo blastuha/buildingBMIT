@@ -1,0 +1,92 @@
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  &__header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 28px;
+  }
+
+  &__content {
+    text-align: center;
+  }
+
+  &__logo {
+    width: 92px;
+    height: 48px;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  &__link {
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 41.6px;
+    color: #000000;
+    text-decoration: none;
+
+    &:hover {
+      transition: all 0.3s linear;
+      color: #007aff;
+    }
+  }
+
+  &__phone {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 60px;
+
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__phone-img {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #343fb80a;
+    border-radius: 8px;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__phone-numbers {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    text-align: left;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #000000;
+  }
+}

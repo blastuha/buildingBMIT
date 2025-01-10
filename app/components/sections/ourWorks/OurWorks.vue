@@ -38,8 +38,8 @@
 
       <div :class="styles['swiper']" v-if="isMobile">
         <swiper
-          :slidesPerView="2"
-          :spaceBetween="0"
+          :slidesPerView="3"
+          :spaceBetween="20"
           :modules="modules"
           class="mySwiper"
           :centeredSlides="true"

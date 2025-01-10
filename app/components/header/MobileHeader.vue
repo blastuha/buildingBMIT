@@ -3,7 +3,7 @@
     <NuxtImg src="/companyLogo.svg" alt="logo" width="92" height="48" />
     <div class="header__buttons">
       <Button text="ЗАКАЗАТЬ ЗВОНОК" />
-      <BurgerMenuBtn />
+      <BurgerMenuBtn @burger-click="emitToggleMenu" />
     </div>
   </header>
 </template>
@@ -11,6 +11,12 @@
 <script setup lang="ts">
 import BurgerMenuBtn from "../ui/BurgerMenuBtn.vue";
 import Button from "@/app/components/ui/Button.vue";
+
+const emit = defineEmits(["toggle-menu"]);
+
+function emitToggleMenu() {
+  emit("toggle-menu");
+}
 </script>
 
 <style lang="scss" scoped>

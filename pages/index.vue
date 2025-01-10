@@ -1,7 +1,8 @@
 <template>
   <main>
+    <MobileOverlay v-if="isMobileMenuOpen && isMobile" />
     <LandingHeader v-if="!isMobile" />
-    <MobileHeader v-else />
+    <MobileHeader v-show="isMobile" @toggle-menu="toggleMobileMenu" />
 
     <MainSection :is-mobile="isMobile" />
     <AboutUs :is-mobile="isMobile" />
@@ -24,13 +25,22 @@ import ContactForm from "~/app/components/sections/contactForm/ContactForm.vue";
 import Contacts from "~/app/components/sections/contacts/Contacts.vue";
 import Footer from "~/app/components/footer/Footer.vue";
 import MobileHeader from "~/app/components/header/MobileHeader.vue";
+import MobileOverlay from "~/app/components/mobileOverlay/MobileOverlay.vue";
 
 // Состояние для отслеживания текущей ширины экрана
 const isMobile = ref(false);
 
+const isMobileMenuOpen = ref(false);
+
+console.log("isMobileMenuOpen", isMobileMenuOpen.value);
+
 const checkScreenWidth = () => {
   const width = window.innerWidth;
   isMobile.value = width < 1280;
+};
+
+const toggleMobileMenu = () => {
+  isMobileMenuOpen.value = !isMobileMenuOpen.value;
 };
 
 onMounted(() => {
