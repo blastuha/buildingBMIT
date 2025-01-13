@@ -38,7 +38,7 @@
 
       <div :class="styles['swiper']" v-if="isMobile">
         <swiper
-          :slidesPerView="3"
+          :slidesPerView="2"
           :spaceBetween="20"
           :modules="modules"
           class="mySwiper"
@@ -47,6 +47,24 @@
           :navigation="{
             prevEl: '.custom-prev',
             nextEl: '.custom-next',
+          }"
+          :breakpoints="{
+            1100: {
+              slidesPerView: 2,
+              spaceBetween: -400,
+            },
+            810: {
+              slidesPerView: 2,
+              spaceBetween: -100,
+            },
+            620: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
           }"
         >
           <swiper-slide class="swiper-slide">
