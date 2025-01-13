@@ -63,6 +63,14 @@ onUnmounted(() => {
   text-align: left;
   border-radius: 8px;
 
+  @media (max-width: 743px) {
+    text-align: center !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    line-height: 16px !important;
+    letter-spacing: -0.01em !important;
+  }
+
   &:hover {
     background-color: #bdbdbd;
   }

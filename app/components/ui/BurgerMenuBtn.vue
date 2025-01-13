@@ -25,6 +25,11 @@ const handleClick = () => {
   height: 48px;
   border-radius: 8px;
 
+  @media (max-width: 743px) {
+    width: 40px;
+    height: 40px;
+  }
+
   img {
     width: 24px;
     height: 24px;

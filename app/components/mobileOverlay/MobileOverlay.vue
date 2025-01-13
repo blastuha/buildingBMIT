@@ -6,7 +6,7 @@
         alt="Company Logo"
         :class="styles['menu-overlay__logo']"
       />
-      <BurgerMenuCloseBtn />
+      <BurgerMenuCloseBtn @burger-click="emitToggleMenu" />
     </header>
     <div :class="styles['menu-overlay__content']">
       <nav :class="styles['menu-overlay__links']">
@@ -34,6 +34,12 @@
 <script setup lang="ts">
 import BurgerMenuCloseBtn from "../ui/BurgerMenuCloseBtn.vue";
 import styles from "./MobileOverlay.module.scss";
+
+const emit = defineEmits(["toggle-menu"]);
+
+function emitToggleMenu() {
+  emit("toggle-menu");
+}
 
 defineOptions({
   name: "MobileOverlay",

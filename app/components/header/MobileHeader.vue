@@ -2,7 +2,7 @@
   <header class="header">
     <NuxtImg src="/companyLogo.svg" alt="logo" width="92" height="48" />
     <div class="header__buttons">
-      <Button text="ЗАКАЗАТЬ ЗВОНОК" />
+      <Button text="ЗАКАЗАТЬ ЗВОНОК" class="call-btn" />
       <BurgerMenuBtn @burger-click="emitToggleMenu" />
     </div>
   </header>
@@ -31,11 +31,24 @@ function emitToggleMenu() {
   width: 100%;
   padding: 0 40px 0 40px;
 
+  img {
+    @media (max-width: 743px) {
+      width: 76px;
+      height: 40px;
+    }
+  }
+
   &__buttons {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 12px;
+  }
+
+  .call-btn {
+    @media (max-width: 743px) {
+      display: none;
+    }
   }
 }
 </style>
