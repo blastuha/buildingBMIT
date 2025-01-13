@@ -5,12 +5,12 @@
     <MobileHeader v-show="isMobile" @toggle-menu="toggleMobileMenu" />
 
     <MainSection :is-mobile="isMobile" />
-    <!-- <AboutUs :is-mobile="isMobile" />
-    <OurWorks :is-mobile="isMobile" />
-    <Services />
-    <ContactForm />
-    <Contacts />
-    <Footer /> -->
+    <AboutUs :is-mobile="isMobile" />
+    <!-- <OurWorks :is-mobile="isMobile" /> -->
+    <!-- <Services /> -->
+    <!-- <ContactForm /> -->
+    <!-- <Contacts /> -->
+    <!-- <Footer /> -->
   </main>
 </template>
 
