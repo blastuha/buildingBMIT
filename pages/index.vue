@@ -29,6 +29,7 @@ import Contacts from "~/app/components/sections/contacts/Contacts.vue";
 import Footer from "~/app/components/footer/Footer.vue";
 import MobileHeader from "~/app/components/header/MobileHeader.vue";
 import MobileOverlay from "~/app/components/mobileOverlay/MobileOverlay.vue";
+import CallForm from "~/app/components/callForm/CallForm.vue";
 
 const isMobile = ref(false);
 

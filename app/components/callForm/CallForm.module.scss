@@ -1,0 +1,153 @@
+/* CallForm.module.scss */
+.call-form__content {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 677px;
+  padding: 32px;
+  background-color: #fff;
+  border-radius: 20px;
+
+  @media (max-width: 1919px) {
+    max-width: 459px;
+  }
+
+  @media (max-width: 1279px) {
+    max-width: 400px;
+  }
+
+  @media (max-width: 743px) {
+    gap: 22px;
+    padding: 20px;
+  }
+}
+
+/* Кнопка-крестик в правом верхнем углу */
+.call-form__close-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  border: none;
+  background: none;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.call-form__header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.call-form__title {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 52px;
+  letter-spacing: -0.01em;
+
+  @media (max-width: 1279px) {
+    font-size: 32px;
+    line-height: 41.6px;
+  }
+
+  @media (max-width: 743px) {
+    font-size: 28px;
+    line-height: 36.4px;
+    text-align: center;
+  }
+}
+
+.call-form__description {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30.4px;
+  text-align: left;
+
+  @media (max-width: 1279px) {
+    font-size: 13px;
+    line-height: 19.76px;
+  }
+
+  @media (max-width: 743px) {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 19.76px;
+    text-align: center;
+  }
+}
+
+.call-form__form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.call-form__input,
+.call-form__textarea {
+  width: 100%;
+  height: 44px;
+  border-radius: 8px;
+  background: #343fb814;
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21.28px;
+  letter-spacing: 0.05em;
+}
+
+.call-form__textarea {
+  height: 88px;
+}
+
+.call-form__checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.52px;
+}
+
+.call-form__checkbox-group input.call-form__checkbox {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  background: #f7f8fc;
+  border: 1px solid rgb(163, 163, 163);
+  cursor: pointer;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.call-form__checkbox-label {
+  @media (max-width: 743px) {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 13px;
+  }
+}
+
+.call-form__checkbox-group a {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #000000;
+}
+
+.call-form__button {
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
