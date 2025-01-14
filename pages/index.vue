@@ -7,10 +7,10 @@
     <MainSection :is-mobile="isMobile" />
     <AboutUs :is-mobile="isMobile" />
     <OurWorks :is-mobile="isMobile" />
-    <!-- <Services /> -->
-    <!-- <ContactForm /> -->
-    <!-- <Contacts /> -->
-    <!-- <Footer /> -->
+    <Services />
+    <ContactForm />
+    <Contacts />
+    <Footer />
   </main>
 </template>
 

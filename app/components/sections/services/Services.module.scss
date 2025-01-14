@@ -18,6 +18,12 @@
     padding-bottom: 120px;
   }
 
+  @media (max-width: 743px) {
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 40px;
+  }
+
   &__content {
     width: 100%;
     display: flex;
@@ -42,6 +48,13 @@
 
       @media (max-width: 1279px) {
         font-size: 32px;
+      }
+
+      @media (max-width: 743px) {
+        font-size: 28px;
+        line-height: 36.4px;
+        letter-spacing: -0.01em;
+        text-align: center;
       }
     }
   }
@@ -108,6 +121,21 @@
     @media (max-width: 1279px) {
       height: 90px;
     }
+
+    @media (max-width: 743px) {
+      flex-direction: column;
+      gap: 24px;
+      height: auto;
+      padding-top: 24px;
+      padding-bottom: 24px;
+      align-items: flex-start;
+    }
+
+    button {
+      @media (max-width: 743px) {
+        width: 100%;
+      }
+    }
   }
 
   .service-name {
@@ -115,11 +143,17 @@
     font-weight: 500;
     line-height: 36.96px;
     letter-spacing: -0.01em;
+    text-align: left;
 
     @media (max-width: 1919px) {
       font-size: 22px;
       font-weight: 500;
       line-height: 29.04px;
+    }
+
+    @media (max-width: 743px) {
+      font-size: 18px;
+      line-height: 23.76px;
     }
   }
 }

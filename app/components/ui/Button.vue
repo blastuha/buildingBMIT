@@ -50,6 +50,7 @@ onUnmounted(() => {
 
 <style lang="scss" module>
 .button {
+  box-sizing: border-box;
   width: fit-content;
   color: #ffffff;
   background-color: #343fb8;

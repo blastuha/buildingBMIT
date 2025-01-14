@@ -18,6 +18,11 @@
     align-items: flex-start;
   }
 
+  @media (max-width: 743px) {
+    height: auto;
+    padding-top: 50px;
+  }
+
   &__content {
     width: 100%;
     display: flex;
@@ -48,6 +53,12 @@
         font-size: 32px;
         line-height: 41.6px;
       }
+
+      @media (max-width: 743px) {
+        font-size: 28px;
+        line-height: 36.4px;
+        text-align: center;
+      }
     }
   }
 
@@ -61,12 +72,24 @@
       grid-template-columns: repeat(2, 1fr); // Две колонки
       gap: 16px;
     }
+
+    @media (max-width: 743px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 24px;
+    }
   }
 
   &__info-item {
     display: flex;
     flex-direction: column;
     gap: 16px;
+
+    @media (max-width: 743px) {
+      gap: 8px;
+    }
 
     span {
       font-family: Inter;
@@ -83,6 +106,10 @@
       @media (max-width: 1279px) {
         font-size: 15px;
         line-height: 22.8px;
+      }
+
+      @media (max-width: 1279px) {
+        font-size: 13px;
       }
     }
 
@@ -104,6 +131,11 @@
       @media (max-width: 1279px) {
         font-size: 20px;
         line-height: 26.4px;
+      }
+
+      @media (max-width: 743px) {
+        font-size: 18px;
+        line-height: 23.76px;
       }
     }
 
@@ -133,6 +165,13 @@
       ); // Увеличиваем ширину на padding для этого брейкпоинта
       margin-left: -40px;
       margin-right: -40px;
+    }
+
+    @media (max-width: 743px) {
+      margin-left: -32px;
+      margin-right: -32px;
+      width: calc(100% + 64px);
+      height: 700px;
     }
 
     img {
