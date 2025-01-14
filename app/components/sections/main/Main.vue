@@ -16,7 +16,6 @@
 
       <Button
         text="ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ"
-        size="xl"
         :class="styles['intro-section__btn']"
       />
 

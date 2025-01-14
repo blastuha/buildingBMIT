@@ -1,6 +1,9 @@
 <template>
   <main>
-    <MobileOverlay v-if="isMobileMenuOpen && isMobile" />
+    <MobileOverlay
+      v-if="isMobileMenuOpen && isMobile"
+      @toggle-menu="toggleMobileMenu"
+    />
     <LandingHeader v-if="!isMobile" />
     <MobileHeader v-show="isMobile" @toggle-menu="toggleMobileMenu" />
 
@@ -27,7 +30,6 @@ import Footer from "~/app/components/footer/Footer.vue";
 import MobileHeader from "~/app/components/header/MobileHeader.vue";
 import MobileOverlay from "~/app/components/mobileOverlay/MobileOverlay.vue";
 
-// Состояние для отслеживания текущей ширины экрана
 const isMobile = ref(false);
 
 const isMobileMenuOpen = ref(false);
@@ -46,10 +48,14 @@ const toggleMobileMenu = () => {
 onMounted(() => {
   checkScreenWidth();
   window.addEventListener("resize", checkScreenWidth);
+  watch(isMobileMenuOpen, (val) => {
+    document.body.style.overflow = val ? "hidden" : "";
+  });
 });
 
 onUnmounted(() => {
   window.removeEventListener("resize", checkScreenWidth);
+  document.body.style.overflow = "";
 });
 </script>
 

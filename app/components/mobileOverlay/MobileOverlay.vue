@@ -15,6 +15,7 @@
         <a href="#services" :class="styles['menu-overlay__link']">Услуги</a>
         <a href="#contacts" :class="styles['menu-overlay__link']">Контакты</a>
       </nav>
+
       <div :class="styles['menu-overlay__phone']">
         <div :class="styles['menu-overlay__phone-img']">
           <NuxtImg src="/icons/smallPhone.svg" alt="phone" />
@@ -28,11 +29,17 @@
         </a>
       </div>
     </div>
+
+    <Button
+      text="ЗАКАЗАТЬ ЗВОНОК"
+      :class="styles['menu-overlay__call-button']"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
 import BurgerMenuCloseBtn from "../ui/BurgerMenuCloseBtn.vue";
+import Button from "../ui/Button.vue";
 import styles from "./MobileOverlay.module.scss";
 
 const emit = defineEmits(["toggle-menu"]);

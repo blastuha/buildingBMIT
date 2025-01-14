@@ -59,3 +59,27 @@ ol {
   padding: 0;
   list-style: none;
 }
+
+/* scroll */
+/* Firefox */
+* {
+  scrollbar-width: thin; /* толщина скролла */
+  scrollbar-color: #c0c0c0 #e6e6e6; /* thumb и трек */
+}
+
+/* Chrome, Safari и прочие WebKit-браузеры */
+::-webkit-scrollbar {
+  width: 10px; /* ширина полосы прокрутки */
+}
+::-webkit-scrollbar-track {
+  background: #e6e6e6; /* трек (фон скролла) */
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #c0c0c0; /* сам бегунок */
+  border-radius: 4px;
+  border: 2px solid #e6e6e6; /* добавим отступ, чтобы визуально было красивее */
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a9a9a9; /* цвет при ховере */
+}
