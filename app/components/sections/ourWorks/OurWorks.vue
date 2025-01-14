@@ -1,5 +1,5 @@
 <template>
-  <section :class="styles['works-section']">
+  <section :class="styles['works-section']" id="offers">
     <div :class="styles['works-section__content']">
       <h1>
         Наши работы

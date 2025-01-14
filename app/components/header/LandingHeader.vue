@@ -5,7 +5,6 @@
     <HeaderNav />
     <div class="header__contact">
       <PhoneBlock />
-      <!-- Добавили @click="openCallForm" -->
       <Button text="ЗАКАЗАТЬ ЗВОНОК" size="xl" @click="openCallForm" />
     </div>
   </header>
@@ -17,10 +16,8 @@ import PhoneBlock from "./PhoneBlock.vue";
 import Button from "@/app/components/ui/Button.vue";
 import { defineEmits } from "vue";
 
-// Создаём "эмит", чтобы родитель (index.vue) мог поймать событие
 const emit = defineEmits(["open-call-form"]);
 
-// Метод, вызываемый по клику на кнопку, эмитит событие в родитель
 function openCallForm() {
   emit("open-call-form");
 }

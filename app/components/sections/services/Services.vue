@@ -1,6 +1,6 @@
 <!-- Services.vue -->
 <template>
-  <section :class="styles['services-section']">
+  <section :class="styles['services-section']" id="services">
     <div :class="styles['services-section__content']">
       <h1>Услуги</h1>
 

@@ -1,7 +1,6 @@
-<!-- index.vue -->
 <template>
   <main>
-    <!-- Мобильный оверлей (как прежде) -->
+    <!-- Мобильный оверлей  -->
     <MobileOverlay
       v-if="isMobileMenuOpen && isMobile"
       @toggle-menu="toggleMobileMenu"
@@ -14,12 +13,9 @@
     <MobileHeader v-show="isMobile" @toggle-menu="toggleMobileMenu" />
 
     <MainSection :is-mobile="isMobile" @open-call-form="handleOpenCallForm" />
-
-    <Services @open-call-form="handleOpenCallForm" />
-
-    <ContactForm @contact-submitted="handleContactFormSubmitted" />
-
     <AboutUs :is-mobile="isMobile" />
+    <Services @open-call-form="handleOpenCallForm" />
+    <ContactForm @contact-submitted="handleContactFormSubmitted" />
     <OurWorks :is-mobile="isMobile" />
     <Contacts />
     <Footer />

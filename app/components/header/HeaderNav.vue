@@ -1,3 +1,4 @@
+<!-- HeaderNav.vue -->
 <template>
   <nav :class="$style['nav']">
     <ul :class="$style['nav-list']">
@@ -6,7 +7,13 @@
         :key="index"
         :class="$style['nav-item']"
       >
-        <a :href="item.href" :class="$style['nav-link']">{{ item.label }}</a>
+        <a
+          href="#"
+          :class="$style['nav-link']"
+          @click.prevent="scrollToSection(item.href)"
+        >
+          {{ item.label }}
+        </a>
       </li>
     </ul>
   </nav>
@@ -14,6 +21,16 @@
 
 <script setup lang="ts">
 import { headerNavItems } from "~/app/constants/headerNavItems";
+
+// плавный скролл
+function scrollToSection(href: string) {
+  const anchorId = href.replace("#", "");
+
+  const element = document.getElementById(anchorId);
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
+  }
+}
 </script>
 
 <style lang="scss" module>

@@ -1,5 +1,5 @@
 <template>
-  <section :class="styles['contacts-section']">
+  <section :class="styles['contacts-section']" id="contacts">
     <div :class="styles['contacts-section__content']">
       <!-- Заголовок -->
       <h1 :class="styles['contacts-section__title']">Контакты</h1>

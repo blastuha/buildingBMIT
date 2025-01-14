@@ -1,5 +1,5 @@
 <template>
-  <section :class="styles['about-section']">
+  <section :class="styles['about-section']" id="about">
     <div :class="styles['about-section__content']">
       <!-- Левый блок: изображение -->
       <!-- <NuxtImg
