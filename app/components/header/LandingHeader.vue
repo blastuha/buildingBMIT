@@ -5,7 +5,7 @@
     <HeaderNav />
     <div class="header__contact">
       <PhoneBlock />
-      <Button text="ЗАКАЗАТЬ ЗВОНОК" size="xl" @click="openCallForm" />
+      <Button text="ЗАКАЗАТЬ ЗВОНОК" size="xl" @click="openConsultationLink" />
     </div>
   </header>
 </template>
@@ -14,12 +14,16 @@
 import HeaderNav from "./HeaderNav.vue";
 import PhoneBlock from "./PhoneBlock.vue";
 import Button from "@/app/components/ui/Button.vue";
-import { defineEmits } from "vue";
+// import { defineEmits } from "vue";
 
-const emit = defineEmits(["open-call-form"]);
+// const emit = defineEmits(["open-call-form"]);
 
-function openCallForm() {
-  emit("open-call-form");
+// function openCallForm() {
+//   emit("open-call-form");
+// }
+
+function openConsultationLink() {
+  window.open("https://forms.yandex.ru/u/6786762a068ff078073f312a/", "_blank");
 }
 </script>
 

@@ -1,4 +1,3 @@
-<!-- MainSection.vue -->
 <template>
   <section :class="styles['intro-section']">
     <div :class="styles['intro-section__content']">
@@ -14,11 +13,11 @@
         </p>
       </div>
 
-      <!-- Кнопки, при клике на которые хотим открыть CallForm на уровне index.vue -->
+      <!-- Кнопки, при клике на которые хотим открыть новую вкладку -->
       <Button
         text="ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ"
         :class="styles['intro-section__btn']"
-        @click="openCallForm"
+        @click="openConsultationLink"
       />
 
       <!-- Картинка (мобильная) -->
@@ -32,17 +31,16 @@
 <script setup lang="ts">
 import styles from "./Main.module.scss";
 import Button from "@/app/components/ui/Button.vue";
-import { defineProps, defineEmits } from "vue";
+import { defineProps } from "vue";
 
+// Принимаем пропсу для проверки мобильной версии
 defineProps({
   isMobile: Boolean,
 });
 
-// Эмитим событие "open-call-form" при клике на кнопку
-const emit = defineEmits(["open-call-form"]);
-
-function openCallForm() {
-  emit("open-call-form");
+// Метод для открытия новой вкладки с формой
+function openConsultationLink() {
+  window.open("https://forms.yandex.ru/u/6786762a068ff078073f312a/", "_blank");
 }
 </script>
 

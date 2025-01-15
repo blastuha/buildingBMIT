@@ -1,5 +1,3 @@
-<!-- MobileOverlay.vue -->
-
 <template>
   <div :class="styles['menu-overlay']">
     <header :class="styles['menu-overlay__header']">
@@ -13,10 +11,30 @@
 
     <div :class="styles['menu-overlay__content']">
       <nav :class="styles['menu-overlay__links']">
-        <a href="#about" :class="styles['menu-overlay__link']">О компании</a>
-        <a href="#works" :class="styles['menu-overlay__link']">Виды работ</a>
-        <a href="#services" :class="styles['menu-overlay__link']">Услуги</a>
-        <a href="#contacts" :class="styles['menu-overlay__link']">Контакты</a>
+        <a
+          href="#about"
+          :class="styles['menu-overlay__link']"
+          @click="emitToggleMenu"
+          >О компании</a
+        >
+        <a
+          href="#offers"
+          :class="styles['menu-overlay__link']"
+          @click="emitToggleMenu"
+          >Виды работ</a
+        >
+        <a
+          href="#services"
+          :class="styles['menu-overlay__link']"
+          @click="emitToggleMenu"
+          >Услуги</a
+        >
+        <a
+          href="#contacts"
+          :class="styles['menu-overlay__link']"
+          @click="emitToggleMenu"
+          >Контакты</a
+        >
       </nav>
 
       <div :class="styles['menu-overlay__phone']">
@@ -36,7 +54,7 @@
     <Button
       text="ЗАКАЗАТЬ ЗВОНОК"
       :class="styles['menu-overlay__call-button']"
-      @click="toggleCallForm"
+      @click="openCallFormLink"
     />
 
     <!-- Если одна из форм открыта, затемняем бэкграунд -->
@@ -72,10 +90,9 @@ const emit = defineEmits(["toggle-menu"]);
 const isCallFormOpen = ref(false);
 const isSuccessOpen = ref(false);
 
-// Клик по кнопке "Заказать звонок"
-function toggleCallForm() {
-  isSuccessOpen.value = false;
-  isCallFormOpen.value = !isCallFormOpen.value;
+// Открытие новой вкладки с формой
+function openCallFormLink() {
+  window.open("https://forms.yandex.ru/u/6786762a068ff078073f312a/", "_blank");
 }
 
 // Закрываем форму и экран успеха при клике на фон
@@ -110,4 +127,6 @@ defineOptions({
 });
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+/* Ваши стили остаются без изменений */
+</style>

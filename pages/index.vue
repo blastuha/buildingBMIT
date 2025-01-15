@@ -7,35 +7,42 @@
     />
 
     <!-- Хедер (десктопная версия) -->
-    <LandingHeader v-if="!isMobile" @open-call-form="handleOpenCallForm" />
+    <LandingHeader v-if="!isMobile" />
 
     <!-- Хедер (мобильная версия) -->
     <MobileHeader v-show="isMobile" @toggle-menu="toggleMobileMenu" />
 
-    <MainSection :is-mobile="isMobile" @open-call-form="handleOpenCallForm" />
+    <MainSection :is-mobile="isMobile" />
     <AboutUs :is-mobile="isMobile" />
-    <Services @open-call-form="handleOpenCallForm" />
-    <ContactForm @contact-submitted="handleContactFormSubmitted" />
+    <Services />
+    <ContactForm />
     <OurWorks :is-mobile="isMobile" />
     <Contacts />
     <Footer />
 
-    <div v-if="isSuccessOpen" class="overlay" @click="closeSuccess">
+    <div v-if="isSuccessOpen" class="overlay">
       <div class="overlay-content" @click.stop>
-        <CallFormSuccess @close-success="closeSuccess" />
+        <CallFormSuccess />
       </div>
     </div>
 
     <div v-if="isCallFormOpen" class="overlay" @click="closeAllOverlays">
       <div class="overlay-content" @click.stop>
-        <CallForm @close-form="closeForm" @form-submitted="showSuccess" />
+        <CallForm />
       </div>
     </div>
+
+    <!-- Кнопка бургер-меню -->
+    <BurgerMenuBtn
+      v-if="isBurgerButtonVisible"
+      class="fixed-burger-btn"
+      @burger-click="emitToggleMenu"
+    />
   </main>
 </template>
 
 <script setup lang="ts">
-import { ref, watch, onMounted, onUnmounted } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 import MainSection from "~/app/components/sections/main/Main.vue";
 import Services from "~/app/components/sections/services/Services.vue";
 import LandingHeader from "~/app/components/header/LandingHeader.vue";
@@ -48,59 +55,44 @@ import MobileHeader from "~/app/components/header/MobileHeader.vue";
 import MobileOverlay from "~/app/components/mobileOverlay/MobileOverlay.vue";
 import CallForm from "~/app/components/callForm/CallForm.vue";
 import CallFormSuccess from "~/app/components/callFormSuccess/CallFormSuccess.vue";
+import BurgerMenuBtn from "~/app/components/ui/BurgerMenuBtn.vue";
 
 const isMobile = ref(false);
 const isMobileMenuOpen = ref(false);
-
-// Для формы звонка (когда открываем её из MainSection, Services, Header)
 const isCallFormOpen = ref(false);
 const isSuccessOpen = ref(false);
+const isBurgerButtonVisible = ref(false); // Видимость кнопки бургер-меню
 
-/* ==== 1) При клике «ОТПРАВИТЬ» в ContactForm === */
-function handleContactFormSubmitted() {
-  isSuccessOpen.value = true;
+function checkScreenWidth() {
+  isMobile.value = window.innerWidth < 1280;
 }
 
-function handleOpenCallForm() {
-  isSuccessOpen.value = false;
-  isCallFormOpen.value = true;
+function toggleMobileMenu() {
+  isMobileMenuOpen.value = !isMobileMenuOpen.value;
 }
 
-function closeForm() {
-  isCallFormOpen.value = false;
-  isSuccessOpen.value = false;
-}
-
-function showSuccess() {
-  isSuccessOpen.value = true;
-}
-
-function closeSuccess() {
-  isSuccessOpen.value = false;
-}
 function closeAllOverlays() {
   isCallFormOpen.value = false;
   isSuccessOpen.value = false;
 }
 
-/* === 4) Мобильное меню === */
-function checkScreenWidth() {
-  isMobile.value = window.innerWidth < 1280;
+function emitToggleMenu() {
+  toggleMobileMenu();
 }
-function toggleMobileMenu() {
-  isMobileMenuOpen.value = !isMobileMenuOpen.value;
+
+function handleScroll() {
+  isBurgerButtonVisible.value = window.scrollY > 50; // Показываем кнопку, если скролл больше 50px
 }
 
 onMounted(() => {
   checkScreenWidth();
   window.addEventListener("resize", checkScreenWidth);
-  watch(isMobileMenuOpen, (val) => {
-    document.body.style.overflow = val ? "hidden" : "";
-  });
+  window.addEventListener("scroll", handleScroll);
 });
+
 onUnmounted(() => {
   window.removeEventListener("resize", checkScreenWidth);
-  document.body.style.overflow = "";
+  window.removeEventListener("scroll", handleScroll);
 });
 </script>
 
@@ -123,5 +115,26 @@ onUnmounted(() => {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.fixed-burger-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2000;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 </style>

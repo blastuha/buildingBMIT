@@ -17,7 +17,7 @@
           >
             <span :class="styles['service-name']">{{ service.name }}</span>
             <!-- По клику на кнопку эмитим событие "open-call-form" -->
-            <Button text="ЗАКАЗАТЬ" size="xl" @click="openCallForm" />
+            <Button text="ЗАКАЗАТЬ" size="xl" @click="openConsultationLink" />
           </li>
         </ul>
       </div>
@@ -28,12 +28,16 @@
 <script setup lang="ts">
 import styles from "./Services.module.scss";
 import Button from "../../ui/Button.vue";
-import { defineEmits } from "vue";
+// import { defineEmits } from "vue";
 
 // Эмитим событие, чтобы родитель (index.vue) открыл CallForm
-const emit = defineEmits(["open-call-form"]);
-function openCallForm() {
-  emit("open-call-form");
+// const emit = defineEmits(["open-call-form"]);
+// function openCallForm() {
+//   emit("open-call-form");
+// }
+
+function openConsultationLink() {
+  window.open("https://forms.yandex.ru/u/6786762a068ff078073f312a/", "_blank");
 }
 
 // Данные услуг
