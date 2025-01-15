@@ -2,7 +2,11 @@
   <header class="header">
     <NuxtImg src="/companyLogo.svg" alt="logo" width="92" height="48" />
     <div class="header__buttons">
-      <Button text="ЗАКАЗАТЬ ЗВОНОК" class="call-btn" />
+      <Button
+        text="ЗАКАЗАТЬ ЗВОНОК"
+        class="call-btn"
+        @click="openConsultationLink"
+      />
       <BurgerMenuBtn @burger-click="emitToggleMenu" />
     </div>
   </header>
@@ -16,6 +20,10 @@ const emit = defineEmits(["toggle-menu"]);
 
 function emitToggleMenu() {
   emit("toggle-menu");
+}
+
+function openConsultationLink() {
+  window.open("https://forms.yandex.ru/u/6786762a068ff078073f312a/", "_blank");
 }
 </script>
 

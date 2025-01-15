@@ -15,7 +15,7 @@
     <MainSection :is-mobile="isMobile" />
     <AboutUs :is-mobile="isMobile" />
     <Services />
-    <ContactForm />
+    <!-- <ContactForm /> -->
     <OurWorks :is-mobile="isMobile" />
     <Contacts />
     <Footer />
@@ -69,11 +69,14 @@ function checkScreenWidth() {
 
 function toggleMobileMenu() {
   isMobileMenuOpen.value = !isMobileMenuOpen.value;
+  document.body.style.overflow = isMobileMenuOpen.value ? "hidden" : "";
 }
 
 function closeAllOverlays() {
   isCallFormOpen.value = false;
   isSuccessOpen.value = false;
+  isMobileMenuOpen.value = false; // Закрываем меню
+  document.body.style.overflow = ""; // Разрешаем скролл
 }
 
 function emitToggleMenu() {
@@ -93,6 +96,7 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener("resize", checkScreenWidth);
   window.removeEventListener("scroll", handleScroll);
+  document.body.style.overflow = ""; // Очистка стиля
 });
 </script>
 
